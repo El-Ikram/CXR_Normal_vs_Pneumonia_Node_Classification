@@ -22,7 +22,14 @@ To ensure fair competition:\
 4.Maximum of 2 GNN layers.
 
 # Submission
-
+* Each participant needs to fork this repository to his GitHub account.
+* Each participant needs build his model using the starter code.
+* Each participant after generating predictions for the test set needs to save them as a CSV file with the required format:\
+  Participant : Score.
+* Score the submissions.
+* Create a Pull Request.
+* After evaluating the submission, the score will appear on the leaderboard.
+  
 # Leaderboard
 
 # References
