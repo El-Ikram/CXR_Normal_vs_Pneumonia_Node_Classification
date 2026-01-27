@@ -13,7 +13,11 @@ Pneumonia is a lung infection that causes inflammation of the air sacs in one or
 Accurate classification of chest X-ray images can help support early detection of pneumonia and improve patient care. \
 In this mini-challenge, the goal is to classify chest X-ray images as Normal or Pneumonia using graph-based learning.
 
+* Each node represents one chest X-ray image.
+* Edges encode similarity between images (e.g., feature similarity via CNN embeddings).
+* Node labels indicate Normal (0) or Pneumonia (1).
 
+Participants will design Graph Neural Network (GNN) models that leverage both node features and the graph structure to classify each X-ray image correctly.
 
  # 🛢️Dataset
 We use the Cora citation network, where:\
