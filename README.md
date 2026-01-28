@@ -22,42 +22,63 @@ Participants will design Graph Neural Network (GNN) models that leverage both no
  # 🛢️Dataset
 This mini-challenge uses the Chest X-Ray Images (Pneumonia) dataset, a widely used public medical imaging dataset for lung disease classification. The dataset contains frontal chest X-ray images collected from pediatric patients and labeled by medical experts as either Normal or Pneumonia.\
 The dataset is class-imbalanced, with more Pneumonia images than Normal images. Participants should take this imbalance into account during training and evaluation:
-* Training set-> Normal = 1341 | Pneunomia = 3875
-* Test set-> Normal = 234 | Pneumonia = 390
-* Total-> Normal = 1575 | Pneumonia = 4265
+* Training set -> Normal = 1341 | Pneunomia = 3875
+* Test set -> Normal = 234 | Pneumonia = 390
+* Total -> Normal = 1575 | Pneumonia = 4265
 
 Below are example chest X-ray images from the dataset, illustrating the visual differences between Normal and Pneumonia cases.\
 <p align="center">
-  <img src="Images/NORMAL2-IM-1427-0001.jpeg" height="300"  />
-  <img src="Images/person1949_bacteria_4880.jpeg" height="300"  />
+  <img src="Images/NORMAL2-IM-1427-0001.jpeg" height="230"  />
+  <img src="Images/person1949_bacteria_4880.jpeg" height="230"  />
 </p>
 
 <p align="center">
-  <em>Left: Normal chest X-ray — Right: Pneumonia chest X-ray</em>
+  <em>Left: Normal chest X-ray | Right: Pneumonia chest X-ray</em>
 </p>
 The dataset is publicly available on Kaggle.
 
-🔗 **Dataset link:**  
-[Dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
-# Evaluation metric
-We evaluate performance using Macro F1-score, which is suitable for imbalanced node classification tasks.\
-The Macro F1-score is computed by first calculating the F1-score independently for each class and then averaging these scores, assigning equal weight to all classes regardless of their frequency.
+🔗 **Dataset link:**  [Dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 
-# Constraints
-To ensure fair competition:\
-1.No External Data.\
-2.No external node features.\
-3.No pretrained embeddings.\
-4.Maximum of 2 GNN layers.
+🔗**Related publication:**  Kermany, D. S., Goldbaum, M., Cai, W., et al. (2018). *[Identifying Medical Diagnoses and Treatable Diseases by Image-Based Deep Learning](https://www.sciencedirect.com/science/article/pii/S0092867418301545)*.  
 
-# Submission
+Files available in data/
+
+- **Train set:** Images with ground-truth labels (Normal / Pneumonia).
+- **Test set:** Images without labels. Participants must submit predictions for these images.
+
+
+# <img width="45" height="45" alt="image" src="https://github.com/user-attachments/assets/6e05cfef-3064-4d6d-bf4b-ea9259f21e11" />Evaluation metric
+Model performance will be assessed using the **Macro F1-score**, which is well-suited for imbalanced classification tasks such as this one.
+
+The Macro F1-score is calculated by:
+1. Computing the F1-score separately for each class.
+2. Taking the unweighted average of these class-level F1-scores.
+
+By giving equal importance to each class regardless of its frequency, the Macro F1-score ensures that performance on minority classes (such as less common labels) is not overlooked.
+
+Higher Macro F1 values indicate better overall classification quality across all classes.
+
+# ⚠️Constraints
+To ensure fair competition:
+1. No External Data, only the data provided for this challenge may be used.
+2. No external node features, it must be derived solely from the given dataset.
+3. No pretrained embeddings or models, all models must be trained from scratch using the provided data.
+4. Maximum of 2 GNN layers, keep your model simple and interpretable (deeper is not always better).
+   
+Think of this as a “from-scratch GNN challenge”, no shortcuts, no pretrained magic, just pure graph learning✨
+
+
+# 📤Submission
+Ready to compete? Follow these steps to get your model on the leaderboard 
 * Each participant needs to fork this repository to his GitHub account.
-* Each participant needs build his model using the starter code.
+* Each participant needs to use the provided starter code as a baseline and implement your GNN model (while respecting all constraints!).
 * Each participant after generating predictions for the test set needs to save them as a CSV file with the required format:\
-  Participant : Score.
+   Participant , Score .
 * Score the submissions.
 * Create a Pull Request.
 * After evaluating the submission, the score will appear on the leaderboard.
+
+ 🌟Higher scores climb higher🌟
   
 # Leaderboard
 All evaluation results will be published in the file Leaderboard.md.\
