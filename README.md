@@ -89,6 +89,7 @@ The competition features a **dynamic, automatically updated leaderboard**.
 
 ✨Watch your team climb the ranks as you submit! 
 
-[View the live leaderboard](leaderboard/index.html)
+[View the live leaderboard](https://El-Ikram.github.io/CXR_Normal_vs_Pneumonia_Node_Classification/leaderboard/index.html)
+
 # References
 Basira's lab lectures on GNNs.
