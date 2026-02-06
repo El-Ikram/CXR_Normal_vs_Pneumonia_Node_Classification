@@ -39,7 +39,7 @@ The dataset is class-imbalanced, with more Pneumonia images than Normal images. 
 * Test set -> Normal = 234 | Pneumonia = 390
 * Total -> Normal = 1575 | Pneumonia = 4265
 
-Below are example chest X-ray images from the dataset, illustrating the visual differences between Normal and Pneumonia cases.\
+Below are example chest X-ray images from the dataset, illustrating the visual differences between Normal and Pneumonia cases.
 <p align="center">
   <img src="Images/NORMAL2-IM-1427-0001.jpeg" height="230"  />
   <img src="Images/person1949_bacteria_4880.jpeg" height="230"  />
