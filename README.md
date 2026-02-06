@@ -112,7 +112,7 @@ The competition features a **dynamic, automatically updated leaderboard**.
 
 ✨Watch your team climb the ranks as you submit! 
 
-[View the live leaderboard](https://El-Ikram.github.io/CXR_Normal_vs_Pneumonia_Node_Classification/leaderboard/index.html)
+[View the live leaderboard](docs/leaderboard.html)
 
 ## 🗓️Timeline
 Start Date: 02/07/2026
